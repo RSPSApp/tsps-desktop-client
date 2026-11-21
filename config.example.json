@@ -1,0 +1,5 @@
+{
+  "name": "ExampleScape",
+  "identifier": "app.rsps.examplescape",
+  "serverUrl": "wss://play.example.com/game"
+}

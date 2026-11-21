@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "RSPS Desktop",
+  "version": "0.1.2",
+  "identifier": "app.rsps.desktop.local",
+  "build": {
+    "frontendDist": "../frontend"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "RSPS Desktop",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 765,
+        "minHeight": 503,
+        "url": "desktop-startup.html",
+        "create": false
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "withGlobalTauri": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app",
+      "dmg"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "12.0",
+      "signingIdentity": "-"
+    },
+    "icon": [
+      "icons/icon.icns",
+      "icons/icon.png"
+    ]
+  },
+  "plugins": {
+    "macos-fps": {
+      "enabled": true
+    },
+    "hot-update": {
+      "enabled": true,
+      "manifestUrl": "https://github.com/RSPSApp/tsps/releases/latest/download/manifest.json",
+      "pubkeys": [
+        "RWSCA9miFd5IPEsHmuTL2JNDoGD/2iIHR4GJn2Dfa06jgDgPFoM2TvgT"
+      ]
+    }
+  }
+}

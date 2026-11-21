@@ -1,0 +1,6 @@
+{
+  "identifier": "client-ready",
+  "description": "The game can confirm a successful startup for update rollback.",
+  "windows": ["main"],
+  "permissions": ["hot-update:allow-notify-app-ready"]
+}

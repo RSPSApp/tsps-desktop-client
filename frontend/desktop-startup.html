@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loading client</title>
+<style>
+main { width: min(320px, calc(100vw - 32px)); }
+.loading-bar { position: relative; min-height: 34px; border: 1px solid #8c1111; }
+.loading-bar-progress { position: absolute; inset: 1px auto 1px 1px; max-width: calc(100% - 2px); background: #8c1111; }
+.loading-bar-text { position: relative; padding: 8px; text-align: center; overflow-wrap: anywhere; font-size: 13px; font-weight: bold; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: black; color: white; font-family: Helvetica, Arial, sans-serif; }
+nav { display: flex; gap: 20px; justify-content: center; margin-top: 24px; font-size: 13px; }
+nav[hidden] { display: none; }
+a { color: white; padding: 8px; }
+a:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+</style>
+<main>
+  <div class="loading-bar-container">
+    <div class="loading-bar" role="progressbar" aria-label="Client update" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="loading-bar-inner">
+        <div id="progress" class="loading-bar-progress" style="width: 0px"></div>
+      </div>
+      <div id="status" class="loading-bar-text" role="status" aria-live="polite">Checking for updates…</div>
+    </div>
+  </div>
+  <nav id="recovery" hidden aria-label="Update recovery">
+    <a href="desktop-startup.html">Try again</a>
+  </nav>
+</main>
+</html>
